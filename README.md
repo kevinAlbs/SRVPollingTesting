@@ -26,7 +26,7 @@ _mongodb._tcp.server.mongodb.com. 1 IN	SRV	0 5 27018 mongodb1.mongodb.com.
 ```
 
 Next, to test this locally, set your default DNS to point to this local server. On macOS you can instruct it to be used as the default DNS server by going to "System Preferences" => "Network" => "Advanced" => "DNS", and adding an entry for "127.0.0.1"
-![DNS setup][dns-setup.png]
+![DNS setup](./dns-setup.png)
 Be careful though. This overrides the default DNS lookup and renders you offline. Remove this entry after testing.
 
 ## Step 2: A sharded cluster ##
