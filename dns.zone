@@ -1,0 +1,15 @@
+; Record                            TTL   Class    Priority Weight Port  Target
+; Run with python -m dnslib.zoneresolver
+; Setting the min TTL to 1 second (and override MONGOC_TOPOLOGY_MIN_RESCAN_SRV_INTERVAL_MS to 1 second)
+; So scanning happens every second instead of every 60 seconds.
+
+; Command and uncomment records as needed to run tests.
+_mongodb._tcp.server.mongodb.com. 1 IN SRV   0        5      27018 mongodb1.mongodb.com.
+;_mongodb._tcp.server.mongodb.com. 1 IN SRV   0        5      27017 mongodb2.mongodb.com.
+;_mongodb._tcp.server.mongodb.com. 1 IN SRV   0        5      27019 mongodb3.mongodb.com.
+;_mongodb._tcp.server.mongodb.com. 1 IN SRV   0        5      27020 mongodb4.mongodb.com.
+
+mongodb1.mongodb.com. 86400 IN  A     127.0.0.1
+mongodb2.mongodb.com. 86400 IN  A     127.0.0.1
+mongodb3.mongodb.com. 86400 IN  A     127.0.0.1
+mongodb4.mongodb.com. 86400 IN  A     127.0.0.1
