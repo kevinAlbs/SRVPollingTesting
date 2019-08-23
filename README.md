@@ -33,7 +33,7 @@ Be careful though. This overrides the default DNS lookup and renders you offline
 You'll need four mongoses for the tests, and SSL configured. The client/server pem files are included in this repo.
 
 ```
-mlaunch init --replicaset --nodes=1 --sharded=1 --mongos 3 --hostname localhost --enableMajorityReadConcern --setParameter enableTestCommands=1 --setParameter="logComponentVerbosity={command:3}" --sslMode=allowSSL --sslPEMKeyFile=server.pem --sslCAFile=ca.pem --sslClientPEMKeyFile=/client.pem --sslClientCertificate=client.pem --sslAllowInvalidCertificates  --dir ./srv-sharded
+mlaunch init --replicaset --nodes=1 --sharded=1 --mongos 3 --hostname localhost --enableMajorityReadConcern --setParameter enableTestCommands=1 --setParameter="logComponentVerbosity={command:3}" --sslMode=allowSSL --sslPEMKeyFile=server.pem --sslCAFile=ca.pem --sslClientPEMKeyFile=./client.pem --sslClientCertificate=client.pem --sslAllowInvalidCertificates  --dir ./srv-sharded
 ```
 
 ## Step 3: Running tests and observing ##
