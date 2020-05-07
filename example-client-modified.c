@@ -161,6 +161,7 @@ main (int argc, char *argv[])
       if (secs > 60)
          break;
    }
+   bson_destroy (cmd);
 
    mongoc_uri_destroy (uri);
    mongoc_client_destroy (client);
